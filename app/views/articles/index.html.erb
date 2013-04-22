@@ -1,0 +1,15 @@
+<h1>All Articles</h1>
+<table>
+
+	<% @articles.each do |article| %>
+	<tr>
+		
+			<td><%= article.title %></td>
+			<td><%= link_to "Go to Article", article_path(article), :class => 'article_title', :id => "article_#{article.id}"%></td>
+			<td><%= link_to "New Article", new_article_path, :class => "new_article" %></td>
+
+		
+	</tr>
+	<% end %>
+
+</table>
